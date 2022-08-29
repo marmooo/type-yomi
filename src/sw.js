@@ -1,4 +1,4 @@
-var CACHE_NAME = "2022-08-07 00:00";
+var CACHE_NAME = "2022-08-29 10:30";
 var urlsToCache = [
   "/tegaki-yomi/",
   "/tegaki-yomi/index.js",
