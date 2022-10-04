@@ -1,4 +1,4 @@
-var CACHE_NAME = "2022-08-29 10:30";
+var CACHE_NAME = "2022-10-04 09:00";
 var urlsToCache = [
   "/tegaki-yomi/",
   "/tegaki-yomi/index.js",
@@ -7,7 +7,7 @@ var urlsToCache = [
   "/tegaki-yomi/mp3/keyboard.mp3",
   "/tegaki-yomi/eraser.svg",
   "/tegaki-yomi/favicon/favicon.svg",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css",
 ];
 
 self.addEventListener("install", function (event) {
