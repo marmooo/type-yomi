@@ -1,12 +1,12 @@
-var CACHE_NAME = "2022-10-04 23:00";
+var CACHE_NAME = "2022-10-05 09:50";
 var urlsToCache = [
-  "/tegaki-yomi/",
-  "/tegaki-yomi/index.js",
-  "/tegaki-yomi/mp3/end.mp3",
-  "/tegaki-yomi/mp3/correct3.mp3",
-  "/tegaki-yomi/mp3/keyboard.mp3",
-  "/tegaki-yomi/eraser.svg",
-  "/tegaki-yomi/favicon/favicon.svg",
+  "/type-yomi/",
+  "/type-yomi/index.js",
+  "/type-yomi/mp3/end.mp3",
+  "/type-yomi/mp3/correct3.mp3",
+  "/type-yomi/mp3/keyboard.mp3",
+  "/type-yomi/eraser.svg",
+  "/type-yomi/favicon/favicon.svg",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css",
 ];
 
