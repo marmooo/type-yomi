@@ -1,4 +1,4 @@
-var CACHE_NAME = "2023-05-03 00:30";
+var CACHE_NAME = "2023-06-16 02:00";
 var urlsToCache = [
   "/type-yomi/",
   "/type-yomi/index.js",
@@ -7,7 +7,6 @@ var urlsToCache = [
   "/type-yomi/mp3/keyboard.mp3",
   "/type-yomi/eraser.svg",
   "/type-yomi/favicon/favicon.svg",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css",
 ];
 
 self.addEventListener("install", function (event) {
