@@ -92,6 +92,63 @@
         <pre><code>sudo apt install speech-dispatcher
 sudo apt install festival speech-dispatcher-festival</code></pre>
       </div>
+      <div id="infoPanel">
+        <div class="row">
+          <div class="col-md">
+            <p>タイプで漢字の読み取り練習ができるゲームです。</p>
+            <div class="d-flex">
+              <div class="notranslate">
+                <pre class="aa">　　_∩､
+((⊂ 彡⌒ミ　
+　　 (´･ω･`)
+　　　 Ｕ　Ｕ
+                </pre>
+              </div>
+              <div class="ps-2">2分でどれくらい解けるかな？</div>
+            </div>
+          </div>
+          <div class="col-md text-center">
+            <div class="alert alert-info">
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="h5 text-nowrap notranslate">
+                  <span id="time">120</span>
+                  <span> / 120 sec</span>
+                </div>
+              </div>
+              <div class="mt-2">
+                <button id="startButton" class="btn btn-primary btn-lg" type="button">スタート</button>
+                <button id="showAnswer" class="btn btn-lg btn-secondary" type="button">こたえ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="playPanel" class="text-center">
+        <div class="h2 pt-3">
+          <div>
+            <span>問題:</span>
+            <span id="problem" class="ps-1 notranslate">漢字</span>
+            <span id="answer" class="ps-2 text-secondary d-none notranslate">かんじ</span>
+          </div>
+          <div>
+            <span>回答:</span>
+            <span id="reply" class="ps-1 notranslate"></span>
+          </div>
+        </div>
+        <div id="typePanel" class="pt-3 notranslate">
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">う</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ど</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ん</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">が</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">か</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">じ</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">だ</button>
+          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ぞ</button>
+          <button class="btn p-0 m-1" type="button">
+            <img alt="文字を消す" src="eraser.svg" width="32" height="32">
+          </button>
+        </div>
+      </div>
       <div id="countPanel" class="text-center d-none notranslate">
         <div id="countdown">
           <div id="counter">3</div>
@@ -126,63 +183,6 @@ sudo apt install festival speech-dispatcher-festival</code></pre>
         <a id="twitter" target="_blank" href="https://twitter.com/intent/tweet?text=タイプ漢字読み取りで遊んだよ!&url=https://marmooo.github.com/type-yomi/&hashtags=タイプ漢字読み取り" class="btn btn-primary btn-lg m-1" role="button">Twitter でつぶやく</a>
         <button id="restartButton" class="btn btn-primary btn-lg m-1" type="button">リスタート</button>
         <div id="badges" class="pt-4"></div>
-      </div>
-      <div id="playPanel">
-        <div class="row">
-          <div class="col-md">
-            <p>タイプで漢字の読み取り練習ができるゲームです。</p>
-            <div class="d-flex">
-              <div class="notranslate">
-                <pre class="aa">　　_∩､
-((⊂ 彡⌒ミ　
-　　 (´･ω･`)
-　　　 Ｕ　Ｕ
-                </pre>
-              </div>
-              <div class="ps-2">2分でどれくらい解けるかな？</div>
-            </div>
-          </div>
-          <div class="col-md text-center">
-            <div class="alert alert-info">
-              <div class="d-flex flex-wrap justify-content-center">
-                <div class="h5 text-nowrap notranslate">
-                  <span id="time">120</span>
-                  <span> / 120 sec</span>
-                </div>
-              </div>
-              <div class="mt-2">
-                <button id="startButton" class="btn btn-primary btn-lg" type="button">スタート</button>
-                <button id="showAnswer" class="btn btn-lg btn-secondary" type="button">こたえ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="h2 pt-3">
-            <div>
-              <span>問題:</span>
-              <span id="problem" class="ps-1 notranslate">漢字</span>
-              <span id="answer" class="ps-2 text-secondary d-none notranslate">かんじ</span>
-            </div>
-            <div>
-              <span>回答:</span>
-              <span id="reply" class="ps-1 notranslate"></span>
-            </div>
-          </div>
-          <div id="typePanel" class="pt-3 notranslate">
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">う</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">ど</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">ん</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">が</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">か</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">じ</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">だ</button>
-            <button class="btn btn-lg btn-outline-secondary m-1" type="button">ぞ</button>
-            <button class="btn p-0 m-1" type="button">
-              <img alt="文字を消す" src="eraser.svg" width="32" height="32">
-            </button>
-          </div>
-        </div>
       </div>
       <div class="pt-5 d-md-block d-none text-center">
         他にもいろいろなゲームがあるよ！
