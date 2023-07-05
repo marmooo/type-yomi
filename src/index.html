@@ -51,15 +51,26 @@
       }
       #counter {
         font-size:10rem; width:12rem; height:12rem; line-height:12rem; border-radius: 50%;
-        background:tomato; margin:auto; }
-      html[data-theme="dark"] { filter: invert(1) hue-rotate(180deg); }
-      @-moz-document url-prefix() { html[data-theme="dark"] { background-color:black; } }
+        background:tomato; color:black; margin:auto; }
+      html[data-bs-theme="dark"] .navbar-brand > img { filter: invert(1) hue-rotate(180deg); }
+      html[data-bs-theme="dark"] .tile img { filter: invert(1) hue-rotate(180deg); }
+      html[data-bs-theme="dark"] .btn-light {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: var(--bs-gray-800);
+        --bs-btn-border-color: var(--bs-gray-800);
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--bs-gray-700);
+        --bs-btn-hover-border-color: var(--bs-gray-600);
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: var(--bs-gray-600);
+        --bs-btn-active-border-color: var(--bs-gray-500);
+      }
     </style>
     <script data-ad-client="ca-pub-6459713332128733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand navbar-light">
+      <nav class="navbar navbar-expand">
         <div class="container flex-wrap">
           <a class="navbar-brand" href="/type-yomi/">
             <img alt="タイプ漢字読み取り" src="/type-yomi/favicon/favicon.svg" width="32" height="32">
@@ -123,8 +134,8 @@ sudo apt install festival speech-dispatcher-festival</code></pre>
           </div>
         </div>
       </div>
-      <div id="playPanel" class="text-center">
-        <div class="h2 pt-3">
+      <div id="playPanel" class="alert alert-info text-center">
+        <div class="h2">
           <div>
             <span>問題:</span>
             <span id="problem" class="ps-1 notranslate">漢字</span>
@@ -136,22 +147,22 @@ sudo apt install festival speech-dispatcher-festival</code></pre>
           </div>
         </div>
         <div id="typePanel" class="pt-3 notranslate">
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">う</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ど</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ん</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">が</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">か</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">じ</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">だ</button>
-          <button class="btn btn-lg btn-outline-secondary m-1" type="button">ぞ</button>
-          <button class="btn p-0 m-1" type="button">
-            <img alt="文字を消す" src="eraser.svg" width="32" height="32">
+          <button class="btn btn-lg btn-light m-1" type="button">う</button>
+          <button class="btn btn-lg btn-light m-1" type="button">ど</button>
+          <button class="btn btn-lg btn-light m-1" type="button">ん</button>
+          <button class="btn btn-lg btn-light m-1" type="button">が</button>
+          <button class="btn btn-lg btn-light m-1" type="button">か</button>
+          <button class="btn btn-lg btn-light m-1" type="button">じ</button>
+          <button class="btn btn-lg btn-light m-1" type="button">だ</button>
+          <button class="btn btn-lg btn-light m-1" type="button">ぞ</button>
+          <button title="文字を消す" id="eraser" class="btn btn-lg btn-light m-1" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" fill="currentColor"><path d="M10.85597,20 L11.1558049,20 C11.5909491,19.9657654 12.0165519,19.7822288 12.3493903,19.4493903 L13.0458369,18.7529437 L5.25294373,10.9600505 L4.55649712,11.6564971 C3.81450096,12.3984933 3.81450096,13.6015067 4.55649712,14.3435029 L9.66238457,19.4493903 C9.99522304,19.7822288 10.4208258,19.9657654 10.8559701,20 Z M13.2129942,20 L18.5,20 C18.7761424,20 19,20.2238576 19,20.5 C19,20.7761424 18.7761424,21 18.5,21 L11.1911564,21 C11.0677787,21.0078499 10.9439962,21.0078499 10.8206199,21 L5.5,21 C5.22385763,21 5,20.7761424 5,20.5 C5,20.2238576 5.22385763,20 5.5,20 L8.79878067,20 L3.84939033,15.0506097 C2.71686989,13.9180892 2.71686989,12.0819108 3.84939033,10.9493903 L10.9552778,3.84350288 C12.0877982,2.71098244 13.9239767,2.71098244 15.0564971,3.84350288 L20.1623846,8.94939033 C21.294905,10.0819108 21.294905,11.9180892 20.1623846,13.0506097 L13.2129942,20 Z M5.96005051,10.2529437 L13.7529437,18.0458369 L19.4552778,12.3435029 C20.1972739,11.6015067 20.1972739,10.3984933 19.4552778,9.65649712 L14.3493903,4.55060967 C13.6073942,3.80861351 12.4043807,3.80861351 11.6623846,4.55060967 L5.96005051,10.2529437 Z"/></svg>
           </button>
         </div>
       </div>
       <div id="countPanel" class="text-center d-none notranslate">
         <div id="countdown">
-          <div id="counter">3</div>
+          <div id="counter"></div>
           <pre class="aa">
 　　　　 ＿＿_ .
 　　　／彡⌒ミ|

@@ -1,11 +1,10 @@
-var CACHE_NAME = "2023-06-24 10:16";
+var CACHE_NAME = "2023-07-06 00:25";
 var urlsToCache = [
   "/type-yomi/",
   "/type-yomi/index.js",
   "/type-yomi/mp3/end.mp3",
   "/type-yomi/mp3/correct3.mp3",
   "/type-yomi/mp3/keyboard.mp3",
-  "/type-yomi/eraser.svg",
   "/type-yomi/favicon/favicon.svg",
 ];
 
