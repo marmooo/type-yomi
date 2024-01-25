@@ -1,4 +1,4 @@
-const CACHE_NAME = "2023-12-09 10:00";
+const CACHE_NAME = "2024-01-25 13:20";
 const urlsToCache = [
   "/type-yomi/",
   "/type-yomi/index.js",
