@@ -9,7 +9,7 @@ let problemCandidate;
 let answerKanji = "漢字";
 let answerYomis = ["かんじ"];
 let correctCount = problemCount = 0;
-const audioContext = new AudioContext();
+const audioContext = new globalThis.AudioContext();
 const audioBufferCache = {};
 loadAudio("end", "mp3/end.mp3");
 loadAudio("correct", "mp3/correct3.mp3");
@@ -65,7 +65,7 @@ function unlockAudio() {
 
 function loadVoices() {
   // https://stackoverflow.com/questions/21513706/
-  const allVoicesObtained = new Promise(function (resolve) {
+  const allVoicesObtained = new Promise((resolve) => {
     let voices = speechSynthesis.getVoices();
     if (voices.length !== 0) {
       resolve(voices);
@@ -90,7 +90,7 @@ function loadVoices() {
 
 function speak(text) {
   speechSynthesis.cancel();
-  const msg = new SpeechSynthesisUtterance(text);
+  const msg = new globalThis.SpeechSynthesisUtterance(text);
   msg.voice = japaneseVoices[Math.floor(Math.random() * japaneseVoices.length)];
   msg.lang = "ja-JP";
   speechSynthesis.speak(msg);
