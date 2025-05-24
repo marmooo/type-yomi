@@ -41,6 +41,10 @@ function createAudioContext() {
 }
 
 function unlockAudio() {
+  const uttr = new SpeechSynthesisUtterance("");
+  uttr.lang = "ja-JP";
+  speechSynthesis.speak(uttr);
+
   if (audioContext) {
     audioContext.resume();
   } else {
@@ -49,7 +53,7 @@ function unlockAudio() {
     loadAudio("correct", "mp3/correct3.mp3");
     loadAudio("keyboard", "mp3/keyboard.mp3");
   }
-  document.removeEventListener("pointerdown", unlockAudio);
+  document.removeEventListener("click", unlockAudio);
   document.removeEventListener("keydown", unlockAudio);
 }
 
@@ -275,5 +279,5 @@ document.getElementById("restartButton").onclick = countdown;
 document.getElementById("startButton").onclick = countdown;
 document.getElementById("showAnswer").onclick = showAnswer;
 document.getElementById("gradeOption").onchange = initProblems;
-document.addEventListener("pointerdown", unlockAudio, { once: true });
+document.addEventListener("click", unlockAudio, { once: true });
 document.addEventListener("keydown", unlockAudio, { once: true });
