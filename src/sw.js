@@ -1,4 +1,4 @@
-const cacheName = "2026-03-31 00:00";
+const cacheName = "2026-07-15 00:00";
 const urlsToCache = [
   "/type-yomi/index.js",
   "/type-yomi/mp3/end.mp3",
